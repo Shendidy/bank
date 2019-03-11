@@ -12,4 +12,11 @@ describe Bank do
       is_expected.to respond_to(:balance)
     end
   end
+
+  context 'Using bank account' do
+    it 'can check current balance' do
+      account = Bank.new
+      expect(account.balance).to eq (0)
+    end
+  end
 end
