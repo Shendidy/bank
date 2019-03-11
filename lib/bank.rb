@@ -13,5 +13,7 @@ class Bank
     @balance -= ammount
   end
 
-  def report; end
+  def report
+    'date || credit || debit || balance'
+  end
 end
