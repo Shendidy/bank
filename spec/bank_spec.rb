@@ -41,5 +41,11 @@ describe 'Dates' do
       account.deposit(10, '10/01/2019')
       expect(account.balance).to eq 10
     end
+    it 'withdrawel to include date' do
+      account = Bank.new
+      account.deposit(10, '10/01/2019')
+      account.withdraw(5, '11/01/2019')
+      expect(account.balance).to eq 5
+    end
   end
 end
