@@ -4,5 +4,7 @@ class Bank
 
   def withdraw; end
 
-  def balance; end
+  def balance
+    0
+  end
 end
