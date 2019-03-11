@@ -11,6 +11,9 @@ describe Bank do
     it 'check responce to balance' do
       is_expected.to respond_to(:balance)
     end
+    it 'check responce to report' do
+      is_expected.to respond_to(:report)
+    end
   end
 end
 
