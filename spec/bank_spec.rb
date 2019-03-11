@@ -52,3 +52,13 @@ describe 'Dates' do
     end
   end
 end
+
+describe 'Reports' do
+  context 'shall be issued upon request' do
+    it 'should show date of depost' do
+      account = Bank.new
+      account.deposit(1000, '01/01/2019')
+      expect(account.report).to include('date || credit || debit || balance')
+    end
+  end
+end
