@@ -15,7 +15,7 @@ describe Bank do
 end
 
 describe 'Bank accounts' do
-  context 'Using bank account' do
+  context 'using bank account' do
     it 'user can check current balance' do
       account = Bank.new
       expect(account.balance).to eq 0
@@ -30,6 +30,16 @@ describe 'Bank accounts' do
       account.deposit(10)
       account.withdraw(5)
       expect(account.balance).to eq 5
+    end
+  end
+end
+
+describe 'Dates' do
+  context 'shall be added to transactions' do
+    it 'deposit to include date' do
+      account = Bank.new
+      account.deposit(10, '10/01/2019')
+      expect(accont.balance).to eq 10
     end
   end
 end
