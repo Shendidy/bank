@@ -14,9 +14,14 @@ describe Bank do
   end
 
   context 'Using bank account' do
-    it 'can check current balance' do
+    it 'user can check current balance' do
       account = Bank.new
       expect(account.balance).to eq (0)
+    end
+    it 'user can deposit into it' do
+      account = Bank.new
+      account.deposit(10)
+      expect(account.balance).to eq (10)
     end
   end
 end
