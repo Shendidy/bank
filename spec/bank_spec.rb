@@ -8,5 +8,8 @@ describe Bank do
     it 'check responce to withdraw' do
       is_expected.to respond_to(:withdraw)
     end
+    it 'check responce to balance' do
+      is_expected.to respond_to(:balance)
+    end
   end
 end
