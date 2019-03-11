@@ -3,4 +3,6 @@ class Bank
   def deposit; end
 
   def withdraw; end
+
+  def balance; end
 end
