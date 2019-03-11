@@ -9,7 +9,7 @@ class Bank
     @balance += ammount
   end
 
-  def withdraw(ammount)
+  def withdraw(ammount, _date = '01/01/1900')
     @balance -= ammount
   end
 end
