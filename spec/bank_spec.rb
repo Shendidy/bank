@@ -57,12 +57,18 @@ describe 'Reports' do
   context 'shall be issued upon request' do
     account = Bank.new
     account.deposit(1000, '01/01/2019')
+    account.withdraw(500, '11/01/2019')
     it 'should show header of report' do
       expect(account.report).to include('date || credit || debit || balance')
     end
-    it 'should show date of depost' do
-      account.report()
-      expect(account.statement).to include('01/01/2019')
+    it 'should show date of deposit' do
+      account.report
+      expect(account.transactions[0]).to include('01/01/2019')
+    end
+    it 'should show date of withdraw' do
+      account.report
+      expect(account.balance).to eq 500
+      expect(account.transactions[1]).to include('11/01/2019')
     end
   end
 end
