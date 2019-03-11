@@ -9,5 +9,7 @@ class Bank
     @balance += ammount
   end
 
-  def withdraw; end
+  def withdraw(ammount)
+    @balance -= ammount
+  end
 end
