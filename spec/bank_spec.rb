@@ -39,7 +39,7 @@ describe 'Dates' do
     it 'deposit to include date' do
       account = Bank.new
       account.deposit(10, '10/01/2019')
-      expect(accont.balance).to eq 10
+      expect(account.balance).to eq 10
     end
   end
 end

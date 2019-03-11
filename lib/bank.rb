@@ -5,7 +5,7 @@ class Bank
     @balance = balance
   end
 
-  def deposit(ammount)
+  def deposit(ammount, _date = '01/01/1900')
     @balance += ammount
   end
 
