@@ -8,12 +8,12 @@ class Bank
     @statement = "date || credit || debit || balance\n"
   end
 
-  def deposit(ammount, date = '01/01/1900')
+  def deposit(ammount = 0, date = '01/01/1900')
     @balance += ammount
     @transactions.push([date, ammount, nil, @balance])
   end
 
-  def withdraw(ammount, date = '01/01/1900')
+  def withdraw(ammount = 0, date = '01/01/1900')
     @balance -= ammount
     @transactions.push([date, nil, ammount, @balance])
   end

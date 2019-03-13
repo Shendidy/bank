@@ -70,5 +70,8 @@ describe 'Reports' do
       expect(account.balance).to eq 500
       expect(account.transactions[1]).to include('11/01/2019')
     end
+    it 'should print statement' do
+      expect { account.print_statement() }.to output(/date || credit/).to_stdout
+    end
   end
 end
